@@ -6,6 +6,7 @@ public class StudentArray {
     private Student[] a;
     final int initialCapacity =10;
     private int nElems;
+    int capacity;
 
 
 
@@ -13,6 +14,11 @@ public class StudentArray {
     public StudentArray(int max){
         nElems = 0;
         a = new Student[initialCapacity];
+    }
+    public StudentArray(){
+        capacity = initialCapacity;
+        nElems =0;
+        a= new Student[capacity];
     }
 
 //    public Student find(int id){
@@ -41,10 +47,14 @@ public class StudentArray {
     }
 
     public static void main(String[] args) {
-        StudentArray stuArr = new StudentArray(10);
+        StudentArray stuArr = new StudentArray();
         stuArr.insert(143,"Tengis Erdenebaatar", 91);
         stuArr.insert(141,"Zelalem Ambisa", 92);
         stuArr.insert(142,"Nishesh Acharya", 93);
 
+       // for (StudentArray stu:stuArr) {
+           // stu.displayAll();
+        }
+
     }
-}
+

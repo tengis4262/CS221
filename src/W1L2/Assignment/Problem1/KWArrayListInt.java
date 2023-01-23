@@ -24,8 +24,8 @@ public class KWArrayListInt {
     }
 
     public void add(int a){
-        if(a==0)
-            return;
+//        if(a==0)
+//            return;
         if(size == capacity){
             reallocate();
         }
@@ -52,6 +52,7 @@ public class KWArrayListInt {
         size=0;
     }
     public int removeIndexOf(int index) {
+
         if (index < 0 || index >= size)
             return 0;
        int old = theData[index];
