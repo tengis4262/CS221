@@ -14,14 +14,14 @@ public class Marketing {
     }
 
     public static void main(String[] args) {
-        ArrayList<Marketing> mar = new ArrayList<>();
 
-      //  ArrayListMarketing<Marketing> mar1 = new ArrayListMarketing();
+//       ArrayListMarketing<Marketing> mar1 = new ArrayListMarketing();
+//        ArrayListMarketing<Marketing> mar1 = new ArrayList();
 
-        mar.add(new Marketing("Tengis","Pepsi", 4.99));
-        mar.add(new Marketing("Uunuu","Cola", 3.99));
-        mar.add(new Marketing("Ankhaa","Sprite", 2.99));
-        mar.add(new Marketing("Daanaa","Fanta", 5.99));
+//        mar1.add(new Marketing("Tengis","Pepsi", 4.99));
+//        mar1.add(new Marketing("Uunuu","Cola", 3.99));
+//        mar1.add(new Marketing("Ankhaa","Sprite", 2.99));
+//        mar1.add(new Marketing("Daanaa","Fanta", 5.99));
 
     }
 }
