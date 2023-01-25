@@ -15,10 +15,10 @@ public class TestEquals { public static void main(String[] args) {
     Student sd3 = new Student(1234, "Amala", "Kama", 86);
 
     boolean res = sd1.equals(sd2);
-    System.out.println("2 Object equal ? " + res);
+    System.out.println(" Object equal ? " + res);
 
     res = sd1.equals(sd3);
-    System.out.println("2 Object equal ? " + res);
+    System.out.println("Object equal ? " + res);
     lNameSort ln =  new lNameSort();
 
     int val = ln.compare(sd1,sd2);

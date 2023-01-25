@@ -24,6 +24,7 @@ public class StudentSort {
         for (Student s:list) {
             System.out.println(s);
         }
+        System.out.println("After sorting by id");
 //        Iterator<Student> st1 = list.iterator();
 //        while(st1.hasNext()){
 //            System.out.println(st1.hasNext());
@@ -36,13 +37,20 @@ public class StudentSort {
             }
         });
         //
-        lNameSort ln = new lNameSort();
-        Collections.sort(list,ln);
-        System.out.println(list);
-
         for (Student stu:list) {
             System.out.println(stu);
         }
+        System.out.println("Sordet by name");
+        lNameSort ln = new lNameSort();
+        Collections.sort(list,ln);
+        for (Student stu:list) {
+            System.out.println(stu);
+        }
+        System.out.println("final result");
+        for (Student stu:list) {
+            System.out.println(stu);
+        }
+        System.out.println(list.get(0).equals(list.get(1)));
     }
 
 }

@@ -10,7 +10,9 @@ public class Marketing {
         this.empName = empName;
         this.productName = productName;
         this.saleAmount = saleAmount;
-
+    }
+    public String toString(){
+        return "Employee Name :" + empName + " Product Name : " + productName +" Sale Amount : " +saleAmount;
     }
 
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ public class Student {
         this.mark = mark;
     }
     public void displayStudent(){
-        System.out.printf("Student id : %d%n", stuId,"Student name : %s%n" , name,"Student mark : %d%n", mark);
+        System.out.println(toString());
     }
     public int getId(){
         return stuId;

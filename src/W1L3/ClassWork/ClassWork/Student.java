@@ -48,7 +48,7 @@ public class Student implements Comparable<Student> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return score == student.score && fname.equals(student.fname);
+        return score == student.score && fname.equals(student.fname) && sid == student.sid && lname.equals(student.lname);
     }
 
 }
