@@ -23,7 +23,9 @@ public class TestEquals { public static void main(String[] args) {
 
     int val = ln.compare(sd1,sd2);
     int val1 = ln.compare(sd1,sd3);
-    System.out.println("Testing if 2 objects lName equal or not " + val +  "\n" + val1);
+    System.out.println("Testing if 2 objects lName equal or not : " + val);
+    System.out.println("Testing if 2 objects lName equal or not : " + val1);
+
 
 
 }

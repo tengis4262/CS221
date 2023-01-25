@@ -40,13 +40,13 @@ public class StudentSort {
         for (Student stu:list) {
             System.out.println(stu);
         }
-        System.out.println("Sordet by name");
+        System.out.println("Sorted by name");
         lNameSort ln = new lNameSort();
         Collections.sort(list,ln);
         for (Student stu:list) {
             System.out.println(stu);
         }
-        System.out.println("final result");
+        System.out.println("Final result");
         for (Student stu:list) {
             System.out.println(stu);
         }

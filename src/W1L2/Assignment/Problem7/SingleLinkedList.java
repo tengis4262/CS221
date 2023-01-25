@@ -1,55 +1,96 @@
 package W1L2.Assignment.Problem7;
 
-public class SingleLinkedList<Integer> {
+public class SingleLinkedList {
+    private class Node{
+        private int data;
+        private Node next;
 
-    public static class Node<Integer>{
-        private Integer data;
-        private Node<Integer> next = null;
-
-        public Node(Integer data , Node<Integer> next){
+        private Node(int data, Node next){
             this.data = data;
             this.next = next;
         }
-        public Node(Integer data){
-            this.data = data;
+        private Node(int data){
+            this(data,null);
         }
-        private Node<Integer> head = null;
-        private int size = 0;
-
-        private void addFirst(Integer item) {
-            head = new Node<Integer>(item, head);
-            size++;
-        }
-        int size() {
-            return size;
-        }
-        private Node<Integer> getNode(int index) {
-            Node<Integer> node = head;
-            for (int i = 0; i < index && node != null; i++) {
-                node = node.next;
-            }
-            return node;
-        }
-        public Integer get(int index) {
-            if (index < 0 || index >= size) {
-                throw new IndexOutOfBoundsException(java.lang.Integer.toString(index));
-            }
-            Node<Integer> node = getNode(index);
-            return node.data;
-        }
-        public Integer findMax(){
-
-        }
-        public boolean find(int item){
-            for (int i = 0; i < size; i++) {
-
-
-            }
-            return true;
-
-        }
-
-
     }
+    private Node head;
+    private int size;
+
+    public SingleLinkedList(){
+        this.head = null;
+        this.size = 0;
+    }
+
+    public void add(int item){
+        Node n = new Node(item,head);
+        head = n;
+        size++;
+    }
+
+    public int size(){
+        return size;
+    }
+
+    public boolean find(int item){
+        Node temp = head;
+        while(temp!=null){
+            if(temp.data==item){
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+
+    public int max(){
+        Node temp = head;
+        if(temp==null){
+            return -1;
+        }
+        else {
+            int max = temp.data;
+            while(temp!=null){
+                if(temp.data>max){
+                    max=temp.data;
+                }
+                temp=temp.next;
+            }
+            return max;
+        }
+    }
+
+    public int min(){
+        Node temp = head;
+        if(temp==null){
+            System.out.println("Empty");
+            return -1;
+        }
+        else {
+            int min = temp.data;
+            while (temp!=null){
+                if(temp.data < min){
+                    min = temp.data;;
+                }
+                temp = temp.next;
+            }
+            return min;
+        }
+    }
+
+    public void display(){
+        if(head==null){
+            return;
+        }
+        else {
+            Node temp = head;
+            while (temp!=null){
+                System.out.println(temp.data+ " ");
+                temp = temp.next;
+            }
+            System.out.println();
+        }
+    }
+
+
 
 }

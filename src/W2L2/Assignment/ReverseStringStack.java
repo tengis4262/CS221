@@ -24,10 +24,11 @@ public class ReverseStringStack {
     }
 
     public String reverse(){
-        StringBuilder result = new StringBuilder("");
+        StringBuilder result = new StringBuilder("[");
         while (!strStack.empty()){
-            result.append(strStack.pop() + " ");
+            result.append(strStack.pop() + ", ");
         }
+        result.append("]");
         return result.toString();
     }
 
