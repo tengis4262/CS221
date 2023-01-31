@@ -17,7 +17,6 @@ public class ReverseStringStack {
     }
     public void fillStack(){
         String[] val = input.split(" ");
-        System.out.println(Arrays.toString(val));
         for (int i = 0; i < val.length; i++) {
             strStack.push(val[i]);
         }
@@ -26,17 +25,22 @@ public class ReverseStringStack {
     public String reverse(){
         StringBuilder result = new StringBuilder("[");
         while (!strStack.empty()){
-            result.append(strStack.pop() + ", ");
+            result.append(strStack.pop() + " ");
         }
-        result.append("]");
         return result.toString();
+    }
+    public void reverse1(){
+        while(!strStack.empty()){
+            System.out.print(strStack.pop() +" ");
+        }
     }
 
 
     public static void main(String[] args) {
         ReverseStringStack rev1 = new ReverseStringStack("I like Java and other programming languages");
         System.out.println(rev1.reverse());
-        System.out.println();
+        rev1.reverse1();
+
     }
 
 

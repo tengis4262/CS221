@@ -10,7 +10,7 @@ public class DoubleLinkedList<E> {
         private Node<E> next;
         private Node<E> prev;
 
-        public Node(E item, Node<E> prev, Node<E> next) {
+        public Node( Node<E> prev, E item, Node<E> next) {
             this.item = item;
             this.prev = prev;
             this.next = next;
@@ -24,7 +24,7 @@ public class DoubleLinkedList<E> {
     }
 
     public void addFirst(E item) {
-        Node<E> newNode = new Node<E>(item ,null, head);
+        Node<E> newNode = new Node<E>(null ,item, head);
         if (head != null) {
             head.prev = newNode;
         }
@@ -34,9 +34,12 @@ public class DoubleLinkedList<E> {
         }
         size++;
     }
+    public int getSize(){
+        return size;
+    }
 
     private void addAfter(Node<E> node, E item) {
-        Node<E> newNode = new Node<E>(item, node, node.next);
+        Node<E> newNode = new Node<E>(node, item, node.next);
         if (node.next != null) {
             node.next.prev = newNode;
         }
@@ -59,12 +62,15 @@ public class DoubleLinkedList<E> {
     }
 
     public E get(int index) {
+        if(index<0 || index >=size){
+            throw new IndexOutOfBoundsException(index);
+        }
         return getNode(index).item;
     }
 
     public void add(int index, E item) {
         if (index < 0 || index > size) {
-            System.out.println("Index Out Of Bound");
+            throw new IndexOutOfBoundsException(index);
         }
         if (index == 0) {
             addFirst(item);

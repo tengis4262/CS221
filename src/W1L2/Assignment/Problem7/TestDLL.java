@@ -6,7 +6,11 @@ public class TestDLL {
 
         dll.addFirst(7);
         dll.addFirst(3);
+        System.out.println(dll.getSize());
+
         dll.addFirst(18);
+
+        System.out.println(dll.getSize());
 
         System.out.println(dll.toString());
 

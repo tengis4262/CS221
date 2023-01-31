@@ -31,7 +31,7 @@ public class KWArrayList<E>
      */
     public KWArrayList() {
         capacity = INITIAL_CAPACITY;
-        theData = (E[]) new Object[capacity];
+        theData = (E[]) new Object[INITIAL_CAPACITY];
     }
 
     /*<exercise chapter="2" section="3" type="programming" number="2"*>*/
@@ -60,7 +60,7 @@ public class KWArrayList<E>
 
 	public void add(int pos, E anEntry) {
 		if (pos > size)
-			return;
+			throw new ArrayIndexOutOfBoundsException(pos);
 		if (size == capacity) {
 			reallocate();
 		}
