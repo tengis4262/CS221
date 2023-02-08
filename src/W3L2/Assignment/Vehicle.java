@@ -2,6 +2,7 @@ package W3L2.Assignment;
 
 
 import java.util.Comparator;
+import java.util.Objects;
 import java.util.TreeSet;
 
 public class Vehicle implements Comparable {
@@ -34,6 +35,19 @@ public class Vehicle implements Comparable {
     @Override
     public String toString(){
         return getVehicleName() + " " + getModel() + " " + getVehiclePrice()+ "\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehicle vehicle = (Vehicle) o;
+        return Objects.equals(VehicleName, vehicle.VehicleName) && Objects.equals(Model, vehicle.Model) && Objects.equals(VehiclePrice, vehicle.VehiclePrice);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(VehicleName, Model, VehiclePrice);
     }
 
     public static void main(String[] args) {

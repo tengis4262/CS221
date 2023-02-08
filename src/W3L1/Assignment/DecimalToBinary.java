@@ -2,7 +2,7 @@ package W3L1.Assignment;
 
 public class DecimalToBinary {
     public static void decToBin(int input){
-        if(input==0){
+        if(input<=0){
             return;
         }else
             System.out.print(input%2);
